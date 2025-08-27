@@ -98,7 +98,7 @@ export default function Nav() {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/spranger-ventures.appspot.com/o/CryptoRush%2Fcryptorush_logo_joined.png?alt=media&token=df5e1ac9-9863-4576-bd04-08402ffe1b2a"
             alt="CryptoRush"
-            height="28"
+            height="35"
           />
         </a>
 
@@ -167,7 +167,7 @@ export default function Nav() {
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/spranger-ventures.appspot.com/o/CryptoRush%2Fcryptorush_logo_joined.png?alt=media&token=df5e1ac9-9863-4576-bd04-08402ffe1b2a"
                 alt="CryptoRush"
-                height="28"
+                height="35"
               />
             </a>
             <button
