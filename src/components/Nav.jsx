@@ -96,7 +96,7 @@ export default function Nav() {
           }}
         >
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/spranger-ventures.appspot.com/o/CryptoRush%2Fcryptorush_logo.png?alt=media&token=28dd84d1-4d99-483e-b9f5-9048d867b480"
+            src="https://firebasestorage.googleapis.com/v0/b/spranger-ventures.appspot.com/o/CryptoRush%2Fcryptorush_logo_joined.png?alt=media&token=df5e1ac9-9863-4576-bd04-08402ffe1b2a"
             alt="CryptoRush"
             height="28"
           />
@@ -165,7 +165,7 @@ export default function Nav() {
               }}
             >
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/spranger-ventures.appspot.com/o/CryptoRush%2Fcryptorush_logo.png?alt=media&token=28dd84d1-4d99-483e-b9f5-9048d867b480"
+                src="https://firebasestorage.googleapis.com/v0/b/spranger-ventures.appspot.com/o/CryptoRush%2Fcryptorush_logo_joined.png?alt=media&token=df5e1ac9-9863-4576-bd04-08402ffe1b2a"
                 alt="CryptoRush"
                 height="28"
               />
