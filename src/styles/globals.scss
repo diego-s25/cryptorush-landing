@@ -361,30 +361,40 @@ img {
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: calc(100vh - var(--nav-h)); /* full viewport minus sticky nav */
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* keep content near the top */
   justify-content: flex-start;
-
-  /* keep a little breathing room without exceeding 100vh */
-  padding-block: clamp(16px, 4vh, 32px) 0; /* top padding only, no bottom */
+  padding-top: clamp(8px, 1.5vh, 16px);
+  padding-bottom: 0;
+  min-height: auto; /* let content define height on mobile */
 }
-.hero__bg {
-  .hero__bg {
-    position: absolute;
-    inset: 0;
-    z-index: -1; /* <-- key: push behind */
-    pointer-events: none;
-
-    /* your metlabs-like gradient */
-    background: linear-gradient(
-      180deg,
-      rgba(10, 11, 16, 1) 0%,
-      rgba(25, 8, 51, 1) 25%,
-      rgba(88, 8, 251, 0.6) 70%,
-      rgba(153, 41, 234, 0.75) 100%
-    );
+@media (min-width: 1024px) {
+  .hero {
+    min-height: calc(100vh - var(--nav-h));
+    align-items: center; /* re-center only on desktop */
+    padding-top: clamp(12px, 2vh, 24px);
   }
+}
+
+/* ensure the two columns align from the top too */
+.hero .grid {
+  align-items: start;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1; /* <-- key: push behind */
+  pointer-events: none;
+
+  /* your metlabs-like gradient */
+  background: linear-gradient(
+    180deg,
+    rgba(10, 11, 16, 1) 0%,
+    rgba(25, 8, 51, 1) 25%,
+    rgba(88, 8, 251, 0.6) 70%,
+    rgba(153, 41, 234, 0.75) 100%
+  );
 }
 
 .hero__bg::after {
@@ -664,7 +674,15 @@ img {
   padding: 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.product-card__icon {
+  width: 56px; /* bigger */
+  height: 56px;
+  margin-bottom: 6px;
 }
 
 .product-kind {
