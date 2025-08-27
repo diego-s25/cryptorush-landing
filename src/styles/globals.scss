@@ -626,6 +626,22 @@ img {
   margin-bottom: 28px;
 }
 
+#products {
+  margin-bottom: 28px;
+}
+
+#academy {
+  margin-bottom: 28px;
+}
+
+#team {
+  margin-bottom: 28px;
+}
+
+#contact {
+  margin-bottom: 28px;
+}
+
 /* ===== Products – vertical list on mobile, 3-up grid on desktop ===== */
 .products {
   display: grid;
@@ -775,15 +791,17 @@ img {
 .navsheet {
   position: fixed;
   inset: 0;
-  z-index: 1100;
+  z-index: 9999; /* above nav/hscroll/dots */
   pointer-events: none;
 }
 .navsheet__backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  opacity: 0;
-  transition: opacity 0.25s ease;
+  .navsheet__backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: #0b0c12; /* solid (no translucency per your ask) */
+    opacity: 1;
+  }
 }
 /* Solid, non-transparent menu sheet + comfy side padding */
 .navsheet__panel {
@@ -791,6 +809,10 @@ img {
   left: 0;
   right: 0;
   top: 0;
+  z-index: 2; /* <- critical: above backdrop */
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.34s cubic-bezier(0.22, 0.9, 0.24, 1);
+  background: #0b0c12; /* solid */
 
   /* 🚫 remove translucency & blur */
   background: linear-gradient(
@@ -826,6 +848,9 @@ img {
   ); /* ok to keep dim, doesn’t affect menu clarity */
   opacity: 0;
   transition: opacity 0.25s ease;
+}
+.navsheet.is-open {
+  pointer-events: auto;
 }
 .navsheet.is-open .navsheet__panel {
   transform: translate3d(0, 0, 0);
@@ -896,5 +921,6 @@ img {
   .navsheet__link {
     font-size: 18px;
     padding: 18px 20px;
+    z-index: 999;
   }
 }
