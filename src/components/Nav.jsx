@@ -104,15 +104,27 @@ export default function Nav() {
 
         {/* Desktop links */}
         <nav className="nav__links nav__links--desktop" aria-label="Primary">
-          {NAV.map((item) => (
-            <button
-              key={item.id}
-              className="nav__link"
-              onClick={() => go(item.id)}
-            >
-              {item.label}
-            </button>
-          ))}
+          {NAV.map((item) =>
+            item.id === "academy" ? (
+              <a
+                key={item.id}
+                className="nav__link"
+                href="https://rushacademy-landing.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <button
+                key={item.id}
+                className="nav__link"
+                onClick={() => go(item.id)}
+              >
+                {item.label}
+              </button>
+            )
+          )}
         </nav>
 
         {/* Mobile hamburger */}
@@ -168,17 +180,31 @@ export default function Nav() {
           </div>
 
           <nav className="navsheet__links container" aria-label="Mobile">
-            {NAV.map((item, i) => (
-              <button
-                key={item.id}
-                ref={i === 0 ? firstLinkRef : undefined}
-                className="navsheet__link"
-                onClick={() => go(item.id)}
-              >
-                <span>{item.label}</span>
-                <i className="navsheet__underline" />
-              </button>
-            ))}
+            {NAV.map((item, i) =>
+              item.id === "academy" ? (
+                <a
+                  key={item.id}
+                  href="https://rushacademy-landing.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="navsheet__link"
+                  onClick={close}
+                >
+                  <span>{item.label}</span>
+                  <i className="navsheet__underline" />
+                </a>
+              ) : (
+                <button
+                  key={item.id}
+                  ref={i === 0 ? firstLinkRef : undefined}
+                  className="navsheet__link"
+                  onClick={() => go(item.id)}
+                >
+                  <span>{item.label}</span>
+                  <i className="navsheet__underline" />
+                </button>
+              )
+            )}
           </nav>
         </div>
       </div>

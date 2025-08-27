@@ -6,7 +6,7 @@ import HorizontalPager from "./components/HorizontalPager";
 import Hero from "./components/Hero";
 import Products from "./components/Products";
 import Companies from "./components/Companies";
-import Academy from "./components/Academy";
+// import Academy from "./components/Academy";
 import Team from "./components/TeamRush";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -39,12 +39,12 @@ export default function App() {
           </div>
         </section>
 
-        <section className="panel" data-panel-id="academy">
+        {/* <section className="panel" data-panel-id="academy">
           <div className="section" id="academy">
             <Academy />
             <Footer />
           </div>
-        </section>
+        </section> */}
 
         <section className="panel" id="team" data-panel-id="team">
           <div className="section" id="team">
